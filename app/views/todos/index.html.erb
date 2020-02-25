@@ -1,0 +1,16 @@
+<h1>Todo list</h1>
+
+<% @todo.each do |t|%>
+  <div>
+    <p>標題： <%= t.title %></p>
+    <p>內容： <%= t.content %></p>
+    <p>狀態： <%= t.status %></p>
+    <p>優先順序： <%= t.priority %></p>
+    <p>開始於： <%= t.start_time %></p>
+    <p>結束於： <%= t.end_time %></p>
+  </div>
+    <%= link_to "編輯", edit_todo_path(t) %>
+    <%= link_to "刪除", todo_path(t), method: :delete%>
+<% end %>
+
+<%= link_to "新增", new_todo_path %>

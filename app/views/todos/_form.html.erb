@@ -2,29 +2,29 @@
   <%= f.label :title, "標題" %>
   <%= f.text_field :title %>
 
-  <%= f.label :start_time, t("todos.start_time") %>
+  <%= f.label :start_time, "開始時間" %>
   <%= f.datetime_local_field :start_time %>
 
-  <%= f.label :end_time, t("todos.end_time") %>
+  <%= f.label :end_time, "結束時間" %>
   <%= f.datetime_local_field :end_time %>
 
   <%= f.label :content, "內容" %>
   <%= f.text_area :content %>
 
-  <%= f.label :priority, t("todos.priority.title") %>
+  <%= f.label :priority, "優先順序" %>
   <%= f.radio_button :priority, "high", checked: true %>
-  <%= f.label :priority, t("todos.priority.high") %>
+  <%= f.label :priority, "高" %>
   <%= f.radio_button :priority, "normal" %>
-  <%= f.label :priority, t("todos.priority.normal") %>
+  <%= f.label :priority, "中"%>
   <%= f.radio_button :priority, "low" %>
-  <%= f.label :priority, t("todos.priority.low") %>
+  <%= f.label :priority, "低"%>
 
   <%= f.label :status, "狀態" %>
   <%= f.select(:status,
                  options_for_select([
-                   [t("todos.status.pending"), "pending"],
-                   [t("todos.status.processing"), "processing"],
-                   [t("todos.status.done"), "done"]
+                   ["準備中", "pending"],
+                   ["進行中", "processing"],
+                   ["完成", "done"]
                  ])) %>
 
   <%= f.submit %>

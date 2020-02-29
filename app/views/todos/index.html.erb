@@ -10,7 +10,7 @@
     <p>結束於： <%= t.end_time %></p>
   </div>
     <%= link_to "編輯", edit_todo_path(t) %>
-    <%= link_to "刪除", todo_path(t), method: :delete%>
+    <%= link_to "刪除", todo_path(t), method: :delete, data: {confirm: "確定刪除?"} %>
 <% end %>
 
 <%= link_to "新增", new_todo_path %>
